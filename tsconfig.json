@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"target": "es2017",
+		"module": "commonjs",
+		"strict": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["*"]
+		}
+	}
+}
