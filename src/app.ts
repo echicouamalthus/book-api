@@ -7,11 +7,9 @@ import { defaultHook } from 'stoker/openapi';
 import { app as authRouter } from '@/src/routes/auth.route';
 import { app as bookRouter } from '@/src/routes/book.route';
 
-import { Scalar } from '@scalar/hono-api-reference';
+// import { Scalar } from '@scalar/hono-api-reference';
 
 import packageJSON from '@/package.json';
-import { db } from '@/drizzle/db';
-import { users } from '@/drizzle/schema';
 
 const app = new OpenAPIHono({
 	strict: true,
@@ -52,16 +50,13 @@ app.get('/', async c => {
 	return c.json({ message: "Congrats! You've deployed Hono to Vercel" });
 });
 
-app.get(
-	'/ui',
-	Scalar({
-		url: '/api/doc',
-		theme: 'saturn',
-		layout: 'modern',
-	})
-);
+// app.get(
+// 	'/ui',
+// 	Scalar({
+// 		url: '/api/doc',
+// 		theme: 'saturn',
+// 		layout: 'modern',
+// 	})
+// );
 
 export default app;
-
-
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjF9.0Q-NDqjzvG9kXDtqk8ALVgLCBZMus0UUlCYPc-EUM7c
