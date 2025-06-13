@@ -4,12 +4,12 @@ import { cors } from 'hono/cors';
 import { notFound, onError, serveEmojiFavicon } from 'stoker/middlewares';
 import { defaultHook } from 'stoker/openapi';
 
-import { app as authRouter } from '@/src/routes/auth.route';
-import { app as bookRouter } from '@/src/routes/book.route';
+import { app as authRouter } from '../src/routes/auth.route';
+import { app as bookRouter } from '../src/routes/book.route';
 
 // import { Scalar } from '@scalar/hono-api-reference';
 
-import packageJSON from '@/package.json';
+import packageJSON from '../package.json';
 
 const app = new OpenAPIHono({
 	strict: true,

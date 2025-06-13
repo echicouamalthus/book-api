@@ -2,7 +2,7 @@ import { migrate } from 'drizzle-orm/bun-sqlite/migrator';
 
 import { drizzle } from 'drizzle-orm/bun-sqlite';
 import { Database } from 'bun:sqlite';
-import env from '@/src/env';
+import env from '../src/env';
 
 const sqlite = new Database(env.DB_FILE_NAME);
 const db = drizzle(sqlite);

@@ -1,7 +1,7 @@
 // middlewares/protectRoute.ts
 import { MiddlewareHandler } from 'hono';
 import { verify } from 'hono/jwt';
-import env from '@/src/env';
+import env from '../env';
 
 export const protectRoute: MiddlewareHandler = async (c, next) => {
 	const authHeader = c.req.header('Authorization');

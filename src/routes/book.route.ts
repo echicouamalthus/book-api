@@ -1,12 +1,12 @@
 import { createRoute, OpenAPIHono } from '@hono/zod-openapi';
 import { jsonContent, jsonContentRequired } from 'stoker/openapi/helpers';
-import { insertBookSchema, selectBookSchema } from '@/drizzle/schema/books';
+import { insertBookSchema, selectBookSchema } from '../../drizzle/schema/books';
 import * as HttpStatusCode from 'stoker/http-status-codes';
-import cloudinary from '@/src/lib/cloudinary';
+import cloudinary from '../lib/cloudinary';
 import { z } from 'zod';
-import * as schema from '@/drizzle/schema';
-import { db } from '@/drizzle/db';
-import { protectRoute } from '@/src/middleware/auth.middleware';
+import * as schema from '../../drizzle/schema';
+import { db } from '../../drizzle/db';
+import { protectRoute } from '../middleware/auth.middleware';
 import { count, eq } from 'drizzle-orm';
 import { IdParamsSchema } from 'stoker/openapi/schemas';
 

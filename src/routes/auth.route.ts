@@ -5,13 +5,13 @@ import {
 	insertLoginUserSchema,
 	insertRegisterUserSchema,
 	selectUserschema,
-} from '@/drizzle/schema/users';
-import { db } from '@/drizzle/db';
-import * as schema from '@/drizzle/schema';
+} from '../../drizzle/schema/users';
+import { db } from '../../drizzle/db';
+import * as schema from '../../drizzle/schema';
 import { eq, or } from 'drizzle-orm';
 import bcrypt from 'bcryptjs';
 import { sign } from 'hono/jwt';
-import env from '@/src/env';
+import env from '../env';
 import { z } from 'zod';
 
 const generateToken = async (userId: number) => {
